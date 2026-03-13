@@ -1,63 +1,167 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RentLedgerPro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background:#f5f7fb;
-            text-align:center;
-            padding:80px;
-        }
+<title>RentLedgerPro</title>
 
-        h1{
-            font-size:50px;
-            color:#2c3e50;
-        }
+<style>
 
-        p{
-            font-size:20px;
-            color:#555;
-        }
+body{
+font-family: Arial, sans-serif;
+background:#f5f7fb;
+margin:0;
+padding:0;
+text-align:center;
+}
 
-        .box{
-            background:white;
-            padding:40px;
-            border-radius:10px;
-            width:500px;
-            margin:auto;
-            box-shadow:0px 5px 20px rgba(0,0,0,0.1);
-        }
+header{
+background:#1f2937;
+color:white;
+padding:40px 20px;
+}
 
-        .button{
-            margin-top:25px;
-            padding:12px 25px;
-            background:#4CAF50;
-            color:white;
-            border:none;
-            border-radius:5px;
-            font-size:16px;
-        }
-    </style>
+header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+opacity:0.9;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:50px 20px;
+}
+
+.features{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:10px;
+width:250px;
+margin:15px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+}
+
+.feature h3{
+margin-top:10px;
+}
+
+.download{
+margin-top:40px;
+}
+
+.button{
+background:#22c55e;
+color:white;
+padding:15px 30px;
+border-radius:6px;
+text-decoration:none;
+font-size:18px;
+}
+
+.pricing{
+margin-top:60px;
+}
+
+.price-card{
+background:white;
+display:inline-block;
+padding:30px;
+margin:15px;
+border-radius:10px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.08);
+width:220px;
+}
+
+footer{
+margin-top:60px;
+padding:30px;
+background:#111827;
+color:white;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="box">
-
+<header>
 <h1>RentLedgerPro</h1>
+<p>Simple Property Management Software for Landlords</p>
+</header>
 
-<p>Simple Property Management Software</p>
+<div class="container">
 
-<p>
-Track tenants, rent payments, leases and property performance in one place.
-</p>
+<h2>Manage Your Properties With Ease</h2>
 
-<p><b>Launching Soon</b></p>
+<div class="features">
 
-<button class="button">Contact</button>
+<div class="feature">
+<h3>Tenant Tracking</h3>
+<p>Manage tenants, leases and contracts in one place.</p>
+</div>
+
+<div class="feature">
+<h3>Rent Payments</h3>
+<p>Track payments, due dates and rent history.</p>
+</div>
+
+<div class="feature">
+<h3>Reports</h3>
+<p>Generate property performance and income reports.</p>
+</div>
 
 </div>
+
+<div class="download">
+
+<h2>Download RentLedgerPro</h2>
+
+<a class="button" href="#">Download Free Trial</a>
+
+</div>
+
+<div class="pricing">
+
+<h2>Pricing</h2>
+
+<div class="price-card">
+<h3>Free</h3>
+<p>1 Property</p>
+<p>Basic Tracking</p>
+</div>
+
+<div class="price-card">
+<h3>Pro</h3>
+<p>$29 / year</p>
+<p>Up to 10 Properties</p>
+</div>
+
+<div class="price-card">
+<h3>Business</h3>
+<p>$99 / year</p>
+<p>Unlimited Properties</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 RentLedgerPro</p>
+
+</footer>
 
 </body>
 </html>
