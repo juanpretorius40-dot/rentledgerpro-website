@@ -1,214 +1,310 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>RentLedgerPro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RentLedgerPro</title>
 
-<style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #111827;
+    }
 
-body{
-font-family: Arial, sans-serif;
-background:#f5f7fb;
-margin:0;
-padding:0;
-text-align:center;
-}
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 40px 20px;
+    }
 
-header{
-background:#1f2937;
-color:white;
-padding:40px 20px;
-}
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
 
-header h1{
-font-size:42px;
-margin-bottom:10px;
-}
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin: 0;
+    }
 
-header p{
-font-size:18px;
-opacity:0.9;
-}
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:50px 20px;
-}
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
 
-.features{
-display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-margin-top:40px;
-}
+    .section-subtext {
+      color: #6b7280;
+      margin-bottom: 35px;
+      font-size: 16px;
+    }
 
-.feature{
-background:white;
-padding:25px;
-border-radius:10px;
-width:250px;
-margin:15px;
-box-shadow:0px 5px 15px rgba(0,0,0,0.08);
-}
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      margin-bottom: 70px;
+    }
 
-.feature h3{
-margin-top:10px;
-}
+    .feature {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 260px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
 
-.download{
-margin-top:40px;
-}
+    .feature h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
 
-.button{
-background:#22c55e;
-color:white;
-padding:15px 30px;
-border-radius:6px;
-text-decoration:none;
-font-size:18px;
-}
+    .feature p {
+      margin: 0;
+      color: #4b5563;
+      line-height: 1.5;
+    }
 
-.pricing{
-margin-top:60px;
-}
+    .screenshots-section {
+      padding: 20px 0 70px 0;
+    }
 
-.price-card{
-background:white;
-display:inline-block;
-padding:30px;
-margin:15px;
-border-radius:10px;
-box-shadow:0px 5px 15px rgba(0,0,0,0.08);
-width:220px;
-}
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-footer{
-margin-top:60px;
-padding:30px;
-background:#111827;
-color:white;
-}
+    .screenshot-card {
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      text-align: left;
+    }
 
-</style>
+    .screenshot-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 14px;
+    }
 
+    .screenshot-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 20px;
+    }
+
+    .screenshot-card p {
+      margin: 0;
+      color: #4b5563;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .download {
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background: #16a34a;
+    }
+
+    .download-note {
+      margin-top: 12px;
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .trust-line {
+      margin-top: 14px;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    .pricing {
+      margin-top: 20px;
+    }
+
+    .pricing-grid {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .price-card {
+      background: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      width: 220px;
+    }
+
+    .price-card h3 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    .price-card p {
+      margin: 10px 0;
+      color: #374151;
+      font-size: 24px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px;
+      background: #111827;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<h1>RentLedgerPro</h1>
-<p>Simple Property Management Software for Landlords</p>
-</header>
+  <header>
+    <h1>RentLedgerPro</h1>
+    <p>Simple Property Management Software for Landlords</p>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-<h2>Manage Your Properties With Ease</h2>
+    <h2>Manage Your Properties With Ease</h2>
+    <p class="section-subtext">
+      An offline desktop app for landlords and property investors.
+    </p>
 
-<div class="features">
+    <div class="features">
+      <div class="feature">
+        <h3>Tenant Tracking</h3>
+        <p>Manage tenants, leases and contracts in one place.</p>
+      </div>
 
-<div class="feature">
-<h3>Tenant Tracking</h3>
-<p>Manage tenants, leases and contracts in one place.</p>
-</div>
+      <div class="feature">
+        <h3>Rent Payments</h3>
+        <p>Track payments, due dates and rent history.</p>
+      </div>
 
-<div class="feature">
-<h3>Rent Payments</h3>
-<p>Track payments, due dates and rent history.</p>
-</div>
+      <div class="feature">
+        <h3>Reports</h3>
+        <p>Generate property performance and income reports.</p>
+      </div>
+    </div>
 
-<div class="feature">
-<h3>Reports</h3>
-<p>Generate property performance and income reports.</p>
-</div>
+    <section class="screenshots-section">
+      <h2>See RentLedgerPro In Action</h2>
+      <p class="section-subtext">
+        Powerful tools to manage your property portfolio.
+      </p>
 
-</div>
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <img src="images/dashboard.png" alt="Portfolio Dashboard">
+          <h3>Portfolio Dashboard</h3>
+          <p>Track portfolio value, risk score and cashflow performance.</p>
+        </div>
 
-<div class="download">
+        <div class="screenshot-card">
+          <img src="images/properties.png" alt="Property Manager">
+          <h3>Property Manager</h3>
+          <p>Manage purchase price, equity growth and property details.</p>
+        </div>
 
-<h2>Download RentLedgerPro</h2>
+        <div class="screenshot-card">
+          <img src="images/deal-analyzer.png" alt="Deal Analyzer">
+          <h3>Deal Analyzer</h3>
+          <p>Evaluate investment properties before buying.</p>
+        </div>
 
-<a href="https://drive.google.com/file/d/1FWS_TVPpZn_o9nVW3oRNfB_4ZtUpEXSI/view?usp=sharing" 
-class="download-btn" 
-target="_blank">
+        <div class="screenshot-card">
+          <img src="images/tenants.png" alt="Tenant Tracking">
+          <h3>Tenant Tracking</h3>
+          <p>Monitor tenants, leases and vacancy periods.</p>
+        </div>
+      </div>
+    </section>
 
-<section style="padding:80px 20px;background:#f9fafb;text-align:center;">
+    <div class="download">
+      <h2>Download RentLedgerPro</h2>
 
-<h2 style="font-size:32px;margin-bottom:10px;">See RentLedgerPro In Action</h2>
+      <a href="https://drive.google.com/file/d/1FWS_TVPpZn_o9nVW3oRNfB_4ZtUpEXSI/view?usp=sharing"
+         class="download-btn"
+         target="_blank"
+         rel="noopener noreferrer">
+        Download Free Version
+      </a>
 
-<p style="color:#6b7280;margin-bottom:50px;">
-Simple tools to manage your property portfolio.
-</p>
+      <p class="download-note">
+        Free version allows 1 property. Upgrade for more.
+      </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:auto;">
+      <p class="trust-line">
+        Works offline • No cloud required • Your data stays on your computer
+      </p>
+    </div>
 
-<div>
-<img src="images/dashboard.png" style="width:100%;border-radius:10px;border:1px solid #e5e7eb;">
-<h3 style="margin-top:15px;">Portfolio Dashboard</h3>
-<p>Track portfolio value, risk score and cashflow performance.</p>
-</div>
+    <div class="pricing">
+      <h2>Pricing</h2>
 
-<div>
-<img src="images/properties.png" style="width:100%;border-radius:10px;border:1px solid #e5e7eb;">
-<h3 style="margin-top:15px;">Property Manager</h3>
-<p>Manage purchase price, equity growth and property details.</p>
-</div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Free</h3>
+          <p>1 Property</p>
+          <p>Basic Tracking</p>
+        </div>
 
-<div>
-<img src="images/deal-analyzer.png" style="width:100%;border-radius:10px;border:1px solid #e5e7eb;">
-<h3 style="margin-top:15px;">Deal Analyzer</h3>
-<p>Evaluate investment properties before buying.</p>
-</div>
+        <div class="price-card">
+          <h3>Pro</h3>
+          <p>$29 / year</p>
+          <p>Up to 10 Properties</p>
+        </div>
 
-<div>
-<img src="images/tenants.png" style="width:100%;border-radius:10px;border:1px solid #e5e7eb;">
-<h3 style="margin-top:15px;">Tenant Tracking</h3>
-<p>Monitor tenants, leases and vacancy periods.</p>
-</div>
+        <div class="price-card">
+          <h3>Business</h3>
+          <p>$99 / year</p>
+          <p>Unlimited Properties</p>
+        </div>
+      </div>
+    </div>
 
-</div>
+  </div>
 
-</section>
-  
-Download Free Version
-
-</a>
-
-<p style="margin-top:10px; color:#777;">
-Free version allows 1 property. Upgrade for more.
-</p>
-</div>
-
-<div class="pricing">
-
-<h2>Pricing</h2>
-
-<div class="price-card">
-<h3>Free</h3>
-<p>1 Property</p>
-<p>Basic Tracking</p>
-</div>
-
-<div class="price-card">
-<h3>Pro</h3>
-<p>$29 / year</p>
-<p>Up to 10 Properties</p>
-</div>
-
-<div class="price-card">
-<h3>Business</h3>
-<p>$99 / year</p>
-<p>Unlimited Properties</p>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 RentLedgerPro</p>
-
-</footer>
+  <footer>
+    <p>© 2026 RentLedgerPro</p>
+  </footer>
 
 </body>
 </html>
